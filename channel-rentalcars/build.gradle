@@ -1,0 +1,7 @@
+description = 'Rentalcars.com supplier integration'
+
+dependencies {
+    api project(':channel-core')
+
+    testImplementation "org.wiremock:wiremock-standalone:${wiremockVersion}"
+}

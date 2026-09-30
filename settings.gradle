@@ -1,0 +1,6 @@
+rootProject.name = 'brokers'
+
+include 'channel-core'
+include 'channel-booking'
+include 'channel-rentalcars'
+include 'api'

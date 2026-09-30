@@ -1,0 +1,23 @@
+# Gradle / Java
+.gradle/
+build/
+out/
+*.class
+*.log
+
+# IDE
+.idea/
+*.iml
+.vscode/
+.DS_Store
+
+# Web
+web/node_modules/
+web/.next/
+web/out/
+web/next-env.d.ts
+web/.env*.local
+*.tsbuildinfo
+
+# Local env
+.env
