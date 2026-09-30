@@ -1,0 +1,21 @@
+# Local PostgreSQL for running the API like production:
+#   docker compose up -d
+#   SPRING_PROFILES_ACTIVE=postgres ./gradlew :api:bootRun
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: brokers
+      POSTGRES_USER: brokers
+      POSTGRES_PASSWORD: brokers
+    ports:
+      - "5432:5432"
+    volumes:
+      - brokers-postgres:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U brokers"]
+      interval: 5s
+      retries: 10
+
+volumes:
+  brokers-postgres:
