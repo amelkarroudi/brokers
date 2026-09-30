@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:brokers-test;MODE=PostgreSQL;DATABASE_TO_LOWER=TRUE;DEFAULT_NULL_ORDERING=HIGH;DB_CLOSE_DELAY=-1
+    username: sa
+    password:
+
+brokers:
+  public-base-url: https://brokers.test
+  security:
+    credential-key: dGVzdC1rZXktdGhpcnR5LXR3by1ieXRlcy1sb25nISE=
+  sync:
+    worker-enabled: false
+  sandbox:
+    enabled: true
+
+logging:
+  level:
+    com.brokers: INFO
+    org.springframework.security: WARN

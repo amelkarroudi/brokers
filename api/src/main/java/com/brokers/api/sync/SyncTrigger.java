@@ -1,0 +1,18 @@
+package com.brokers.api.sync;
+
+/** Why a sync job was created; shown in the sync log. */
+public enum SyncTrigger {
+    VEHICLE_PUBLISHED,
+    VEHICLE_UPDATED,
+    VEHICLE_UNPUBLISHED,
+    VEHICLE_ARCHIVED,
+    PHOTOS_CHANGED,
+    LOCATION_UPDATED,
+    AVAILABILITY_CHANGED,
+    RESERVATION_CHANGED,
+    CHANNEL_CONNECTED,
+    CHANNEL_RECONNECTED,
+    CHANNEL_DISCONNECTED,
+    MANUAL_RESYNC,
+    MANUAL_RETRY
+}
